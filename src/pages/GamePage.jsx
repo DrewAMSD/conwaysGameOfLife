@@ -45,8 +45,11 @@ function Grid(props) {
       }, 1000); // time interval inbetween running effect
     }
 
+    /*when useEffect is called again(gameIsRunning changes values) or 
+    the programs unmounts(for example you leave the page that has grid), 
+    this cleanup(return) is automatically called before running the 
+    useEffect again, clearing/stopping the interval*/
     return () => {
-      // Cleanup function to clear the interval when the component unmounts or gameIsRunning becomes false
       clearInterval(intervalId);
     };
   }, [props.gameIsRunning]);
