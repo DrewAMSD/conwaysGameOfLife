@@ -25,23 +25,7 @@
   margin-left: 5px;
 }
 
-.cell {
-  height: 50px;
-  width: 50px;
-  border: solid 2px;
-  border-color: rgb(255, 255, 255);
-}
-
-.cell-alive {
-  background-color: rgb(255, 251, 0);
-}
-
-.grid {
-  display: flex;
-  flex-direction: column;
-}
-
-.grid-row {
-  display: flex;
-  flex-direction: row;
+.reset-game-button {
+  margin-left: 5px;
+  margin-right: 5px;
 }
