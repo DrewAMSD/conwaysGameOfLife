@@ -4,7 +4,7 @@ import "./Cell.css";
 export default function Cell(props) {
   const [statusCell, setStatusCell] = useState(props.stateCell);
 
-  function handleClick() {
+  function updateCell() {
     if (!props.gameIsRunning) {
       setStatusCell((prevStatusCell) =>
         prevStatusCell === "dead" ? "alive" : "dead"
@@ -18,7 +18,7 @@ export default function Cell(props) {
         className={`cell ${
           statusCell === "alive" ? "cell-alive" : "cell-dead"
         }`}
-        onClick={handleClick}
+        onClick={updateCell}
       >
         {statusCell}
       </div>
